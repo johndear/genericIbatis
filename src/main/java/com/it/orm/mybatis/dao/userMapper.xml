@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace可以随便命名 -->
+<mapper namespace="com.it.orm.mybatis.dao.IUserInfoDao">
+	
+	<!-- 角色管理与授权-角色列表 -->
+	<select id="queryForList" resultType="com.it.common.metatype.impl.BaseDto">
+		SELECT * FROM mysql.sys_menu
+	</select>
+	
+	<select id="queryForSize" resultType="java.lang.Integer">
+		SELECT count(*) FROM mysql.sys_menu
+	</select>
+    
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<!-- 角色管理与授权手工映射SQL语句 -->
+<sqlMap namespace="Menu">
+	<typeAlias alias="dto" type="com.it.common.metatype.impl.BaseDto"/>
+	
+	<!-- 角色管理与授权-角色列表 -->
+	<select id="getMenus" parameterClass="map" resultClass="dto">
+		SELECT * FROM mysql.sys_menu
+	</select>
+	
+</sqlMap>
