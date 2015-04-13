@@ -4,7 +4,7 @@
 <configuration>
 
 	<typeAliases>
-		<typeAlias alias="dto" type="com.it.common.metatype.impl.BaseDto"/>
+		<typeAlias alias="dto" type="com.it.common.entity.BaseDto"/>
 	</typeAliases>
 	
     <!-- <plugins>

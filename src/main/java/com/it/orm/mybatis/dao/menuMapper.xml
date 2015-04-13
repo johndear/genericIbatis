@@ -5,7 +5,7 @@
 <mapper namespace="com.it.orm.mybatis.dao.IMenuDao">
 	
 	<!-- 角色管理与授权-角色列表 -->
-	<select id="queryForList" resultType="com.it.common.metatype.impl.BaseDto">
+	<select id="queryForList" resultType="com.it.common.entity.BaseDto">
 		SELECT * FROM mysql.sys_menu
 	</select>
 	
