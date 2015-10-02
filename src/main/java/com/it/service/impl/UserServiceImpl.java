@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.it.common.service.BaseServiceImpl;
 import com.it.entity.UserInfoVo;
+import com.it.orm.ibatis.dao.IMenuDao;
 import com.it.orm.mybatis.dao.IUserInfoDao;
 import com.it.orm.mybatis.vo.UserInfo;
 import com.it.service.UserService;
@@ -22,8 +23,8 @@ import com.it.service.UserService;
 @Transactional
 public class UserServiceImpl extends BaseServiceImpl implements UserService {
 
-//	@Autowired
-//	private IMenuDao menuDao;
+	@Autowired
+	private IMenuDao menuDao;
 	
 	@Autowired
 	private IUserInfoDao userInfoDao;
@@ -31,7 +32,7 @@ public class UserServiceImpl extends BaseServiceImpl implements UserService {
 	@SuppressWarnings({"rawtypes" })
 	public List<UserInfoVo> getAllUsers() {
 		List list = userInfoDao.queryForList();
-//		list = menuDao.queryForList("Menu.getMenus");
+		list = menuDao.queryForList("Menu.getMenus");
 		return list;
 	}
 	

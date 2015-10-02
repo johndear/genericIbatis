@@ -20,7 +20,7 @@ public class MenuController {
 	@RequestMapping(value="get")
 	@ResponseBody
 	public List<UserInfoVo> getMenu(){
-		List<UserInfoVo> list = userServiceImpl.getAllUsers2(); 
+		List<UserInfoVo> list = userServiceImpl.getAllUsers2();
 		return list;
 	}
 	
